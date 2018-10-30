@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+.base-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(38, 41, 58, 0.8);
+    z-index: 99;
+}
+
+header .base-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .menu button {    
+    margin: 1em 0;
+    padding: 0;
+    background: transparent;
+    font-size: 24px;
+    border: none; 
+    color: #fff;
+    outline: none;
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.8em 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 0.4em;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+nav ul li a:hover {
+    background: rgba(127, 131, 153, 0.8);
+}
+
+.base-container.app {
+    display: flex;
+    justify-content: space-between;
+    min-height: 500px;
+    margin-top: 100px;
+}
+
+.info-text {
+    max-width: 40%;
+    text-align: center;
+    margin: 41px 0;
+    padding-right: 20px;
+}
+
+.info-text h1 {
+    color: #ccc;
+    font-size: 50px;
+}
+
+.info-text p {
+    font-size: 30px;
+    color: #ccc;
+}
+
+.info-dicaration {
+    position: relative;
+    display: block;
+    width: 680px;
+}
+
+.info-dicaration .image-container {
+    max-width: 100%;
+}
+
+.images-ipad-slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.images-ipad-slide img {
+    position: absolute;
+    width: 84.4%;
+    margin: 4.7% 7.8%;
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 50px; 
+}
+
+.feature button {
+    padding: 35px 50px;
+    margin:  0 50px;
+    font-size: 30px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: #ccc;
+    transition: background 0.2s;
+} 
+
+.feature button:hover {
+    background: rgb(147, 140, 177);    
+}
+
+.feature button.active {
+    background: rgb(147, 140, 177);
+}
+
+.feature-dicaration {
+    display: none; 
+    margin: 0 auto;
+    min-height: 400px;
+}
+
+.feature-dicaration-img {
+    position: relative;
+    width: 271px;
+    margin: 0 auto;
+}
+
+.feature-dicaration-img img {
+    position: absolute; 
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    transform: translateX(-50%);
+}
+
+.images-iphone-slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 1240px) {
+    .info-text {
+        max-width: 45%;
+        text-align: center;
+        margin: 41px auto;
+        padding-right: 20px;
+    }
+    .info-text h1 {
+        color: #ccc;
+        font-size: 42px;
+    }
+    .info-text p {
+        font-size: 27px;
+        color: #ccc;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .info-dicaration {
+        display: none;
+    }
+    .feature-dicaration {
+        display: block;
+    }
+    .info-dicaration {
+        margin-left: 41px;
+    }
+    .info-text h1 {
+        font-size: 35px;
+    }
+    .info-text p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .feature-dicaration-img img {
+        max-width: 80%;
+    }
+    .info-dicaration {
+        margin-left: 41px;
+    }
+}
+
+@media screen and (max-width: 855px){
+    .feature button {
+        padding: 15px 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .base-container.app {
+        flex-direction: column;
+        margin-top: 50px;
+        min-height: 220px;
+    }
+    .feature-dicaration-img img {
+        max-width: 80%;
+    }
+    .feature button {
+        font-size: 20px;
+        padding: 29px 9px;
+        margin: 0 22px;
+    }
+    .info-text {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .feature button {
+        padding: 14px 9px;
+        width: 85%;
+        margin: 4px auto;
+        border-radius: 30px;
+        font-size: 14px;
+    }
+    .feature {
+        flex-direction: column;
+    }
+    header .menu button {
+        margin: 1.3em 0;
+        font-size: 20px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .info-text h1 {
+        font-size: 32px;
+    }
+    .info-text p {
+        font-size: 19px;
+    }
+    .feature-dicaration {
+        min-height: 360px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .info-text h1 {
+        font-size: 30px;
+    }
+    .feature-dicaration-img {
+        width: 241px;
+    }
+}
